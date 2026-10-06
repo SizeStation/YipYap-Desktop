@@ -826,11 +826,11 @@ export function registerUpdater(getMainWindow: () => BrowserWindow | null) {
 		return;
 	}
 	if (process.platform === 'linux' && isRunningFromAppImage()) {
-		const appImage = resolveAppImageTarget();
-		if (appImage.ok) {
-			registerAppImageUpdater(getMainWindow, appImage.target);
-			return;
-		}
+		// const appImage = resolveAppImageTarget();
+		// if (appImage.ok) {
+		// 	registerAppImageUpdater(getMainWindow, appImage.target);
+		// 	return;
+		// }
 	}
 	registerManualUpdater(getMainWindow, 'platform');
 }
